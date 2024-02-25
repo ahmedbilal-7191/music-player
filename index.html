@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>Mysic player</title>
+
+</head>
+
+<body>
+    <div>
+        <div class="container">
+            <div class="mainbox">
+                <div class="head row">
+                    <i class='bx bxs-chevron-down bx-sm l1'></i>
+                    <p class="paraa">Now Playing</p>
+                    <i class='bx bx-dots-horizontal-rounded bx-sm l1'></i>
+
+                </div>
+                <div class="imgmain"><img id="mainimg"
+                        src="0e387c7a2c5f422fc1d5c646c9d1498732-28-bieberbelieve.w710.webp"></div>
+                <div class="namessing">
+                    <p id="singnam">Justin bieber</p>
+                    <p id="singmov">Justin bieber-terehawalee</p>
+                </div>
+                <div class="bar">
+
+                    <audio id="finalaud" src="Tere Hawaale_64(PagalWorld.com.se).mp"></audio>
+                    <input type="range" value="0" id="progress">
+                </div>
+                <div class="allcontent row">
+                    <i class='bx bx-repeat bx-sm l2'></i>
+                    <i onclick="prev()" class='bx bx-skip-previous bx-sm l2'></i>
+                    <i id="playbtn" class='bx bx-play bx-sm l2'></i>
+                    <i onclick="next()" class='bx bx-skip-next bx-sm l2'></i>
+                    <i id="asal" class='bx bxs-playlist bx-sm l2'></i>
+                    <!-- <button id="hatt"> remove</button> -->
+                    
+                </div>
+                <!-- <div class="" style="border: 2px solid red;" id="fin">
+                  
+                </div> -->
+
+
+
+
+
+            </div>
+            <div class="row"></div>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script>
+        // let aud = a.play()
+        // <i class='bx bx-pause'></i>
+
+        let a = document.getElementById('finalaud')
+        let b = document.getElementById('playbtn')
+        let c = document.getElementById('mainimg')
+        let p1 = document.getElementById('singnam')
+        let p2 = document.getElementById('singmov')
+        let progress = document.getElementById('progress')
+        console.log(c)
+        b.addEventListener('click', chalao)
+        // a.src=$('Tere Hawaale_64(PagalWorld.com.se).mp3')
+        a.onloadedmetadata = function () {
+            progress.max = a.duration
+            progress.value = a.currentTime
+        }
+        if (a.play()) {
+            setInterval(() => {
+                progress.value = a.currentTime
+            }, 700)
+        }
+
+        progress.onchange = function () {
+            a.play()
+            a.currentTime = progress.value
+        }
+
+        function chalao() {
+            if (b.className === "bx bx-play bx-sm l2") {
+                a.play()
+                b.className = 'bx bx-pause bx-sm l2'
+
+            }
+            else {
+                a.pause()
+                b.className = "bx bx-play bx-sm l2"
+            }
+        }
+
+        function prev() {
+            let x = Math.round(Math.random() * 10);
+            // console.log(x)
+            a.src = data[x].source
+            console.log(a.src)
+            p1.innerHTML = data[x].name
+            p2.innerHTML = data[x].singer
+            a.play()
+            c.src = "laal-singh-chaddha-day-5-box-office-detailed-collection-report.avif"
+
+
+        }
+
+        function next() {
+            let x = Math.round(Math.random() * 10);
+            console.log(x)
+            a.src = data[x].source
+            console.log(a.src)
+            p1.innerHTML = data[x].name
+            p2.innerHTML = data[x].singer
+            // a.src="As-Long-As-You-Love-Me---Justin-Bieber(PagalWorld).mp3"
+            a.play()
+            c.src = "0e387c7a2c5f422fc1d5c646c9d1498732-28-bieberbelieve.w710.webp"
+
+        }
+
+        
+        const rem =document.createElement('button')
+        rem.innerHTML="X"
+        rem.id="hatt"
+        console.log(rem)
+        let chance = document.getElementById('asal')
+        chance.addEventListener("click", shuru)
+        function shuru() {
+
+            let elementt = document.getElementById('fin')
+            // console.log(rem)
+        
+            elementt.append(rem)
+            for (let index = 0; index < data.length; index++) {
+                const finelement = data[index];
+                // console.log(finelement)
+                // console.log(Object.values(finelement)[0] + "\n" + Object.values(finelement)[2])
+                let musiclist1 = Object.values(finelement)[1] + "\n" + Object.values(finelement)[2]
+                // elementt.append(musiclist1)
+
+
+
+                const para = document.createElement("p");
+                // para.innerHTML = "This is a paragraph.";
+                para.append(musiclist1)
+                elementt.append(para);
+
+
+
+
+            }
+            elementt.classList.add("mystyle")
+        
+
+
+        }
+
+        // document.getElementByClassName
+        // document.getElementsByClassName
+        // let rukh = document.getElementsByClassName("hatt")
+        // let rukh = document.getElement
+        // nullerabaigan
+        // console.log(rukh)
+        let rukh = document.getElementById('hatt')
+        rem.addEventListener("click",remov)
+        // rukh.addEventListener("click", remov)
+        function remov() {
+            let elementt = document.getElementById('fin')
+            let v = elementt.textContent
+            let u = elementt.textContent= " "
+            console.log(u)
+            console.log(elementt.textContent)
+            elementt.classList.remove("mystyle")
+            elementt.replaceChild(v,u)
+            // elementt.remove("v")
+            // elementt.remove('p')
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

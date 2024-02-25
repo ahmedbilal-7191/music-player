@@ -1,0 +1,213 @@
+body{
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    /* background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+     */
+}
+.container {
+    /* width: 800px; */
+    /* margin: auto; */
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto 0; */
+    margin-top: 7%;
+    /* margin-top: 100px; */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainbox {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+    /* border: 2px solid blue; */
+    /* background-color: #fc466b; */
+    position: relative;
+    height: 37rem;
+    width: 25rem;
+    /* top: 20%; */
+    /* left: 36%; */
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px;
+    /* padding: 12px; */
+    /* margin-top: auto;
+    margin-bottom: auto; */
+}
+
+.head {
+ 
+    padding: 8px 4px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* border: 2px solid pink; */
+}
+.head p{
+    /* border: 2px solid red; */
+
+    padding: 7px 20px;
+}
+.paraa{
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin: auto;
+    /* color: #fff; */
+}
+
+.imgmain {
+    margin-top: 10px;
+    border: 5px solid whitesmoke ;
+    border-radius: 25px;
+    width: 85%;
+    height: 45%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+
+.imgmain img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.l1 {
+    margin: auto;
+    /* border: 2px solid black; */
+    border-radius: 18px;
+    background-color: whitesmoke;
+    border: 2px solid #f53192;
+    cursor: pointer;
+    /* display: block; */
+}
+.l1:hover{
+    background-color: #f53192;
+    transition: all 0.2s linear 0.1s;
+}
+.l2 {
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #f53192;
+    /* border: 2px solid black; */
+    border-radius: 22px;
+    padding: 3px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    
+    /* display: block; */
+}
+.l2:hover{
+    background-color: #f53192;
+    transition: all 0.2s linear 0.1s;
+}
+
+/* .allcontent { */
+    /* padding-top: 8px; */
+    /* border: 2px solid yellow; */
+
+/* } */
+
+.namessing {
+
+    width: 70%;
+    /* padding: 5px; */
+
+    /* border: 2px solid blue; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: auto;
+    text-align: center;
+}
+.namessing p{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+#progress{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #f53192;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 25px 0;
+}
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: #f53192;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+.bar{
+    margin: auto;
+    width: 75%;
+    /* border: 2px solid green; */
+}
+
+
+
+
+
+
+
+.mystyle {
+    border: whitesmoke 4px solid;
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    background-color:#C850C0;
+    color: white;
+    font-size: 25px;
+    max-height: 250px;
+    overflow-y: scroll;
+    transform: translateY(-85%);
+    border-radius: 14px;
+    /* pointer-events: none; */
+  }
+.mystyle p{
+    box-shadow: 1px 1px;
+    background-color: #f53192;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 9px;
+}
+.mystyle::-webkit-scrollbar{
+    width: 0px;
+    /* height: 10px; */
+    /* border:  2px solid green; */
+    /* color: #4158D0; */
+    /* background-color: #fff; */
+}
+.mystyle button{
+    border: 2px solid black;
+    background-color: #4158D0;
+    margin-left: 200px;
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
